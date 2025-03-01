@@ -1,6 +1,8 @@
 import NavBar from "./components/NavBar";
 import Pfp from "./assets/pic.png";
-
+import Icons from "./components/Icons";
+import { AiOutlineCaretRight } from "react-icons/ai";
+import ImageSlider from "./components/ImageSlider";
 function App() {
   const iconLogo = [
     {
@@ -36,8 +38,32 @@ function App() {
       alt: "CSS3",
     },
     {
-      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-      alt: "CSS3",
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      alt: "JavaScript",
+    },
+    {
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+      alt: "PHP",
+    },
+    {
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+      alt: "C++",
+    },
+    {
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+      alt: "C#",
+    },
+    {
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+      alt: "MongoDB",
+    },
+    {
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+      alt: "MySQL",
+    },
+    {
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+      alt: "Express.js",
     },
   ];
 
@@ -73,12 +99,12 @@ function App() {
       {/* <hr className="border-2 border-black w-full" /> */}
       <section className="bg-zinc-800">
         {/* About me section */}
-        <div className="flex flex-row justify-between gap-10 my-10 container mx-auto items-center text-white">
-          <div className="flex flex-col gap-2">
+        <div className="flex flex-row justify-between gap-10 container mx-auto items-center text-white">
+          <div className="flex flex-col gap-2 flex-1">
             <h1 className="text-7xl font-black font-primary mb-10 ">
               ABOUT ME
             </h1>
-            <div className="text-xltext-justify">
+            <div className="text-xl text-justify">
               <p>
                 I’m a <strong>Full-Stack Developer</strong> specializing in
                 building dynamic, responsive, and user-friendly web
@@ -99,113 +125,38 @@ function App() {
             </div>
           </div>
 
-          <div className="h-[500px] min-h-[1em] w-2 bg-white"></div>
-          <div className="flex flex-col text-xl">
-            <h3 className="text-4xl">Work Experience</h3>
-            <p>
-              {" "}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum quos id odio voluptatibus quod qui facilis nulla sequi
-              expedita deserunt repellendus eum beatae voluptas, vel eveniet
-              perspiciatis fuga hic nobis.
-            </p>
+          <div className="my-10 h-[500px] min-h-[1em] w-0.5 bg-white"></div>
+          <div className="flex flex-col text-xl text-center">
+            <h3 className="text-5xl mb-10 font-bold">EXPERIENCE</h3>
+            <div className="flex flex-col gap-5">
+              <div className="flex flex-row gap-5">
+                <AiOutlineCaretRight color="red" size={30} />
+                <div>
+                  <b>2023</b> SPECIAL PROGRAM FOR EMPLOYMENT OF STUDENTS (SPES)
+                  <ul className="text-left">
+                    <li> - Web Developer</li>
+                    <li> - City Government of Naga</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="flex flex-row gap-5">
+                <AiOutlineCaretRight color="red" size={30} />
+                <div>
+                  <b>2023</b> SPECIAL PROGRAM FOR EMPLOYMENT OF STUDENTS (SPES)
+                  <ul className="text-left">
+                    <li> - Web Developer</li>
+                    <li> - City Government of Naga</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <h1 className="text-5xl font-bold text-center text-white mb-10">
           SKILL SET
         </h1>
-        <div className="flex flex-row justify-center gap-5">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-            alt="React"
-            width="50"
-            height="50"
-          />
-          <img
-            src="https://play-lh.googleusercontent.com/ekpyJiZppMBBxCR5hva9Zz1pr3MYlFP-vWTYR3eIU7HOMAmg3jCJengHJ1GFgFMyyYc"
-            alt="Flask"
-            width="50"
-            height="50"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-            alt="Python"
-            width="50"
-            height="50"
-          />
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1280px-Bootstrap_logo.svg.png"
-            alt="Bootstrap"
-            width="50"
-            height="50"
-          />
-          <img
-            src="https://www.svgrepo.com/show/374118/tailwind.svg"
-            alt="Tailwind CSS"
-            width="50"
-            height="50"
-          />
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg"
-            alt="Flutter"
-            width="50"
-            height="50"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-            alt="HTML5"
-            width="50"
-            height="50"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-            alt="CSS3"
-            width="50"
-            height="50"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-            alt="JavaScript"
-            width="50"
-            height="50"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-            alt="PHP"
-            width="50"
-            height="50"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-            alt="C++"
-            width="50"
-            height="50"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
-            alt="C#"
-            width="50"
-            height="50"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-            alt="MongoDB"
-            width="50"
-            height="50"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-            alt="MySQL"
-            width="50"
-            height="50"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
-            alt="Express.js"
-            width="50"
-            height="50"
-          />
-        </div>
+        <Icons icons={iconLogo} />
+        <ImageSlider />
       </section>
     </div>
   );
