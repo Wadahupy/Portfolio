@@ -4,8 +4,13 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
-import { IoArrowBackOutline, IoArrowForwardOutline } from "react-icons/io5";
+import { motion } from "framer-motion";
+import {
+  Autoplay,
+  EffectCoverflow,
+  Pagination,
+  Navigation,
+} from "swiper/modules";
 
 import slide_image_1 from "../assets/images/img_1.jpg";
 import slide_image_2 from "../assets/images/img_2.jpg";
@@ -28,35 +33,54 @@ const images = [
 ];
 const ImageSlider = () => {
   return (
-    <div className="max-w-screen-xl mx-auto px-4 py-8">
-      <h1 className="text-6xl font-semibold text-center mb-6 text-white">
+    <div className="max-w-screen-2xl mx-auto py-8 mt-15">
+      <motion.h1
+        className="md:text-6xl text-5xl font-bold text-center mb-6 text-white"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+      >
         CERTIFICATES
-      </h1>
+      </motion.h1>
 
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={2} // Show surrounding slides
+        slidesPerView={2} // Default for larger screens
+        breakpoints={{
+          300: {
+            slidesPerView: 1, // For small screens
+          },
+          600: {
+            slidesPerView: 2, // For small screens
+          },
+          1024: {
+            slidesPerView: 2, // For medium and large screens
+          },
+        }}
         coverflowEffect={{
           rotate: 0,
-          stretch: 50, // Increase spacing between slides
-          depth: 200, // Reduce depth to bring background slides forward
-          modifier: 1.5, // Adjust effect strength
-          slideShadows: false, // Disable dark slide shadows
+          stretch: 50,
+          depth: 200,
+          modifier: 1.5,
+          slideShadows: false,
+        }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
         }}
         pagination={{ clickable: true }}
-        navigation={true}
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        className="relative w-full h-[520px] py-4"
+        modules={[Autoplay, EffectCoverflow, Pagination, Navigation]}
+        className="relative w-full h-[520px] py-4 rounded-2xl shadow-lg"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index} className="w-full h-[420px]">
             <img
               src={image}
               alt={`slide ${index + 1}`}
-              className="w-full h-full object-obtain rounded-2xl shadow-lg"
+              className=" md:mx-0 mx-5 w-full h-full object-obtain rounded-2xl shadow-lg"
             />
           </SwiperSlide>
         ))}
