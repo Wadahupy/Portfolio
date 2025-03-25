@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+<<<<<<< HEAD
 import Pfp from "../assets/pic.png";
 import Icons from "../components/Icons";
 import { AiOutlineCaretRight } from "react-icons/ai";
@@ -9,12 +10,19 @@ import Projects from "../components/Projects";
 import { motion } from "framer-motion";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+=======
+import HomeSection from "../components/sections/HomeSection";
+import AboutSection from "../components/sections/AboutSection";
+import WorkSection from "../components/sections/WorkSection";
+import ContactSection from "../components/sections/ContactSection";
+>>>>>>> 6ce8e0f4098fd54deaa2c9ea7794d0a839dceb44
 
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-primary overflow-hidden">
       {/* Navigation bar */}
       <Header />
+<<<<<<< HEAD
       <div className="container mx-auto">
         {/* Head section */}
         <section className=" flex md:flex-row flex-col gap-10 my-20 mb-50 md:justify-start justify-center items-center flex-wrap w-full container">
@@ -198,6 +206,16 @@ const HomePage = () => {
       <footer>
         <Footer />
       </footer>
+=======
+      {/* Home section */}
+      <HomeSection />
+      {/* About me section */}
+      <AboutSection />
+      {/* Works section */}
+      <WorkSection />
+      {/* Contact section */}
+      <ContactSection />
+>>>>>>> 6ce8e0f4098fd54deaa2c9ea7794d0a839dceb44
     </div>
   );
 };
