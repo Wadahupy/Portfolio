@@ -8,6 +8,7 @@ import MarqueeTicker from "../components/MarqueeTicker";
 import Projects from "../components/Projects";
 import { motion } from "framer-motion";
 import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   return (
@@ -28,7 +29,7 @@ const HomePage = () => {
           <motion.img
             src={Pfp}
             alt="Profile"
-            className="md:h-[600px] h-[400px] w-80 md:mx-0 mx-auto"
+            className="md:h-[600px] h-[400px] md:w-96 w-1/2 md:mx-0 mx-auto"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
@@ -94,7 +95,7 @@ const HomePage = () => {
             <h1 className="text-7xl md:text-start text-center font-black font-primary mb-10 md:mt-0 mt-15">
               ABOUT ME
             </h1>
-            <div
+            <motion.div
               className="text-xl text-justify md:text-start mx-10"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -118,7 +119,7 @@ const HomePage = () => {
                 Over the years, I’ve honed my skills, turning ideas into fully
                 functional digital products.
               </p>
-            </div>
+            </motion.div>
           </motion.div>
 
           <div className="md:block hidden my-10 h-[500px] min-h-[1em] w-0.5 bg-white mx-10"></div>
@@ -194,6 +195,9 @@ const HomePage = () => {
       <section className="bg-zinc-800">
         <Contact />
       </section>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };

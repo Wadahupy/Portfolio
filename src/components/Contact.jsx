@@ -8,21 +8,21 @@ const Contact = () => {
       <div className="md:w-1/2 text-left text-white">
         <h1 className="text-6xl  font-header font-black mb-15">CONTACTS</h1>
         <div className="space-y-4 ">
-          <hr class="my-5 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/20" />
+          <hr className="my-5 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/20" />
           <div className="flex items-center space-x-4">
             <span className="text-3xl">
               <LuMail />
             </span>
             <p className="text-xl">sample@gmail.com</p>
           </div>
-          <hr class="my-5 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/20" />
+          <hr className="my-5 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/20" />
           <div className="flex items-center space-x-4">
             <span className="text-3xl">
               <LuPhone />
             </span>
             <p className="text-xl">+63 976 333 0294</p>
           </div>
-          <hr class="my-5 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/20" />
+          <hr className="my-5 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/20" />
           <div className="flex items-center space-x-4">
             <span className="text-3xl">
               <LuGithub />
@@ -35,7 +35,7 @@ const Contact = () => {
               Wadahupy
             </a>
           </div>
-          <hr class="my-5 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/20" />
+          <hr className="my-5 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/20" />
           <div className="flex items-center space-x-4">
             <span className="text-3xl">
               <LuLinkedin />
@@ -48,7 +48,7 @@ const Contact = () => {
               Denzel Quilatan
             </a>
           </div>
-          <hr class="my-5 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/20" />
+          <hr className="my-5 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/20" />
         </div>
       </div>
       {/* Contact Form */}

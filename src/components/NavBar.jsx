@@ -4,7 +4,7 @@ import { LuMenu, LuX } from "react-icons/lu";
 
 const Nav = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-6 md:gap-20 font-header text-2xl">
+    <div className="flex flex-col md:flex-row gap-6 md:gap-20 font-header text-2xl stick">
       <NavLink to="/" className="hover:text-gray-500">
         Home
       </NavLink>
