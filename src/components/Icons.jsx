@@ -71,14 +71,8 @@ const Icons = ({ icons = iconLogo }) => {
         <motion.div
           key={index}
           className="rounded-xl border-4 bg-white shadow-lg border-slate-200 p-5 flex mx-auto"
-<<<<<<< HEAD
-          initial={{ opacity: 0, scale: 0.5 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-=======
           initial={{ opacity: 0, scale: 0.5, y: 20 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
->>>>>>> 6ce8e0f4098fd54deaa2c9ea7794d0a839dceb44
           transition={{ duration: 0.3, delay: index * 0.1 }}
         >
           <img src={icon.src} width="40" height="40" alt={icon.alt} />

@@ -22,15 +22,16 @@ const AboutSection = () => {
         alphaParticles={true}
         particleBaseSize={300}
         sizeRandomness={1.5}
-        className="relative inset-0 -z-0 border border-red-500 h-screen left-0"
+        className="absolute inset-0 z-0 border border-red-500 h-screen left-0"
         cameraDistance={20}
         moveParticlesOnHover={true}
         particleHoverFactor={0.8}
       />
+
       {/* About Section Content */}
-      <div className="absolute top-10 right-50 flex flex-row flex-wrap justify-between gap-10 container mx-auto items-center text-white w-full z-20">
+      <div className="flex flex-row flex-wrap justify-between gap-10 container mx-auto items-center text-white w-full">
         <motion.div
-          className="flex flex-col gap-2 flex-1 z-20"
+          className="flex flex-col gap-2 flex-1"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
@@ -81,10 +82,9 @@ const AboutSection = () => {
           </div>
         </motion.div>
       </div>
-
       {/* Skill Set Section */}
       <motion.h1
-        className="absolute text-5xl font-bold text-center text-white mb-10 md:text-6xl z-10"
+        className="text-5xl font-bold text-center text-white mb-10 md:text-6xl z-10"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
