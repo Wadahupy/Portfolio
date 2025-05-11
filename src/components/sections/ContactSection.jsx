@@ -3,7 +3,7 @@ import Contact from "../Contact";
 
 const ContactSection = () => {
   return (
-    <section className="bg-zinc-800">
+    <section>
       <Contact />
     </section>
   );

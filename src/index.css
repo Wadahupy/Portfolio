@@ -4,8 +4,9 @@
 
 @theme {
   --color-primary: #F7F6F3;
-
+  --color-secondary: #010100;
   --font-header: 'inter';
+  --text-tiny: 12rem;
 }
 
 

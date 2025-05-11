@@ -1,22 +1,43 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
 import { LuMenu, LuX } from "react-icons/lu";
+import { Link } from "react-scroll";
 
 const Nav = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-6 md:gap-20 font-header text-2xl stick">
-      <NavLink to="/" className="hover:text-gray-500">
+    <div className="flex flex-col text-white md:flex-col font-header text-2xl w-full ">
+      <Link
+        to="home"
+        smooth={true}
+        duration={500}
+        className="cursor-pointer hover:text-gray-500"
+      >
         Home
-      </NavLink>
-      <NavLink to="/about" className="hover:text-gray-500">
+      </Link>
+      <Link
+        to="about"
+        smooth={true}
+        duration={500}
+        className="cursor-pointer hover:text-gray-500"
+      >
         About
-      </NavLink>
-      <NavLink to="/works" className="hover:text-gray-500">
+      </Link>
+      <Link
+        to="works"
+        smooth={true}
+        duration={500}
+        className="cursor-pointer hover:text-gray-500"
+      >
         Works
-      </NavLink>
-      <NavLink to="/contact" className="hover:text-gray-500">
+      </Link>
+      <Link
+        to="contact"
+        smooth={true}
+        duration={500}
+        className="cursor-pointer hover:text-gray-500"
+      >
         Contacts
-      </NavLink>
+      </Link>
     </div>
   );
 };
@@ -32,24 +53,24 @@ const NavBar = () => {
     <>
       <nav className="flex justify-between items-center p-4">
         {/* Desktop Navigation */}
-        <div className="hidden md:flex">
+        <div className="md:flex">
           <Nav />
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        {/* <div className="md:hidden">
           <button onClick={toggle} className="text-3xl">
             {isOpen ? <LuX size={50} /> : <LuMenu size={50} />}
           </button>
-        </div>
+        </div> */}
       </nav>
 
       {/* Mobile Navigation */}
-      {isOpen && (
+      {/* {isOpen && (
         <div className="flex flex-col items-center gap-4 bg-white w-full py-4 border-t border-gray-300 md:hidden">
           <Nav />
         </div>
-      )}
+      )} */}
     </>
   );
 };

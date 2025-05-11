@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
 import Header from "../components/Header";
 import HomeSection from "../components/sections/HomeSection";
 import AboutSection from "../components/sections/AboutSection";
@@ -6,18 +7,49 @@ import WorkSection from "../components/sections/WorkSection";
 import ContactSection from "../components/sections/ContactSection";
 
 const HomePage = () => {
+  useEffect(() => {
+    const lenis = new Lenis({
+      lerp: 0.07,
+      smooth: true,
+    });
+
+    const raf = (time) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen bg-primary overflow-hidden">
+    <div className="min-h-screen bg-secondary">
       {/* Navigation bar */}
+
       <Header />
+
       {/* Home section */}
-      <HomeSection />
+      <section id="home">
+        <HomeSection />
+      </section>
+
       {/* About me section */}
-      <AboutSection />
+      <section id="about">
+        <AboutSection />
+      </section>
+
       {/* Works section */}
-      <WorkSection />
+      <section id="works">
+        <WorkSection />
+      </section>
+
       {/* Contact section */}
-      <ContactSection />
+      <section id="contact">
+        <ContactSection />
+      </section>
     </div>
   );
 };

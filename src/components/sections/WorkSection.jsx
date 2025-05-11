@@ -4,10 +4,10 @@ import Projects from "../Projects";
 
 const WorkSection = () => {
   return (
-    <section className="bg-primary">
+    <section>
       <MarqueeTicker />
       <div className="container mx-auto">
-        <p className="text-center mt-10">
+        <p className="text-center mt-10 text-primary">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut

@@ -4,19 +4,20 @@ import { AiOutlineCaretRight } from "react-icons/ai";
 import Icons from "../Icons";
 import ImageSlider from "../ImageSlider";
 import Particles from "../animations/Particles";
+import Pfp from "../../assets/pic.png";
 
 const AboutSection = () => {
   return (
     <motion.section
-      className="relative w-full h-screen overflow-hidden bg-zinc-800"
+      className="relative w-full mb-100 h-screen "
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
       {/* Particles Background */}
-      <Particles
-        particleCount={500}
-        particleSpread={20}
+      {/* <Particles
+        particleCount={1000}
+        particleSpread={15}
         speed={0.1}
         particleColors={["#ffffff", "#ffffff", "#ffffff"]}
         alphaParticles={true}
@@ -26,19 +27,28 @@ const AboutSection = () => {
         cameraDistance={20}
         moveParticlesOnHover={true}
         particleHoverFactor={0.8}
-      />
+      /> */}
 
       {/* About Section Content */}
       <div className="flex flex-row flex-wrap justify-between gap-10 container mx-auto items-center text-white w-full">
+        <motion.img
+          src={Pfp}
+          alt="Profile"
+          className="md:h-[600px] h-[400px] w-80 md:mx-0 mx-auto"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.6 }}
+        />
         <motion.div
           className="flex flex-col gap-2 flex-1"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-7xl md:text-start text-center font-black font-primary mb-10 md:mt-0 mt-15">
+          <h1 className="text-7xl md:text-start text-center font-medium font-primary mb-10 md:mt-0 mt-15">
             ABOUT ME
           </h1>
+
           <div className="text-xl text-justify md:text-start mx-10">
             <p>
               I'm a <strong>Full-Stack Developer</strong> specializing in
@@ -54,15 +64,15 @@ const AboutSection = () => {
           </div>
         </motion.div>
 
-        <div className="md:block hidden my-10 h-[500px] w-0.5 bg-zinc-700 mx-10"></div>
+        {/* <div className="md:block hidden my-10 h-[500px] w-0.5 bg-zinc-700 mx-10"></div> */}
 
-        <motion.div
+        {/* <motion.div
           className="flex flex-col text-xl text-center mx-10 md:mb-0 mb-15"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <h3 className="text-5xl mb-10 font-bold">EXPERIENCE</h3>
+          <h3 className="text-5xl mb-10">EXPERIENCE</h3>
           <div className="flex flex-col gap-5 text-start">
             {[2022, 2023].map((year) => (
               <div className="flex flex-row gap-5" key={year}>
@@ -80,18 +90,18 @@ const AboutSection = () => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
       {/* Skill Set Section */}
-      <motion.h1
-        className="text-5xl font-bold text-center text-white mb-10 md:text-6xl z-10"
+      {/* <motion.h1
+        className="text-5xl font-bold text-center text-white mb-10 md:text-6xl"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
       >
         SKILL SET
       </motion.h1>
-      <Icons />
+      <Icons /> */}
       <ImageSlider />
     </motion.section>
   );

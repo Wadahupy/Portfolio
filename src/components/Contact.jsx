@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div className="flex flex-col md:flex-row justify-center min-h-screen p-6 container mx-auto pt-20">
       {/* Contact Information */}
-      <div className="md:w-1/2 text-left text-white">
+      <div className="md:w-1/2 text-left text-white ">
         <h1 className="text-6xl  font-header font-black mb-15">CONTACTS</h1>
         <div className="space-y-4 ">
           <hr className="my-5 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/20" />
@@ -52,7 +52,7 @@ const Contact = () => {
         </div>
       </div>
       {/* Contact Form */}
-      <div className="md:w-2/5 md:h-[500px] bg-zinc-900 text-white p-6 rounded-lg shadow-lg mt-6 md:mt-0 md:ml-10">
+      <div className="md:w-2/5 md:h-[500px]  text-white p-6 rounded-lg shadow-lg mt-6 md:mt-0 md:ml-10  border border-white/20">
         <h2 className="text-3xl font-bold mb-4 text-center">Message me</h2>
         <form>
           <label className="block mb-2">Email</label>
