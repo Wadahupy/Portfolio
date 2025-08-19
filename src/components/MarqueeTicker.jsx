@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 const MarqueeTicker = () => {
@@ -15,7 +14,7 @@ const MarqueeTicker = () => {
             <span key={i}> WORKS &bull; </span>
           ))}
         </motion.div>
-        <motion.div
+        {/* <motion.div
           className="flex text-7xl font-black font-header flex-shrink-0"
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
@@ -24,7 +23,7 @@ const MarqueeTicker = () => {
           {[...Array(10)].map((_, i) => (
             <span key={i}> WORKS &bull; </span>
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );

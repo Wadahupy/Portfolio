@@ -1,4 +1,3 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -33,7 +32,7 @@ const images = [
 ];
 const ImageSlider = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto py-8 mt-15">
+    <div className="w-full mx-auto py-8 mt-15">
       <motion.h1
         className="md:text-6xl text-5xl font-bold text-center mb-6 text-white"
         initial={{ opacity: 0, scale: 0.9 }}

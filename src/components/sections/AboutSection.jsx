@@ -1,108 +1,61 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { AiOutlineCaretRight } from "react-icons/ai";
 import Icons from "../Icons";
-import ImageSlider from "../ImageSlider";
-import Particles from "../animations/Particles";
 import Pfp from "../../assets/pic.png";
 
 const AboutSection = () => {
   return (
     <motion.section
-      className="relative w-full mb-100 h-screen "
+      className="w-full min-h-screen px-10 my-16 md:my-24 "
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      {/* Particles Background */}
-      {/* <Particles
-        particleCount={1000}
-        particleSpread={15}
-        speed={0.1}
-        particleColors={["#ffffff", "#ffffff", "#ffffff"]}
-        alphaParticles={true}
-        particleBaseSize={300}
-        sizeRandomness={1.5}
-        className="absolute inset-0 z-0 border border-red-500 h-screen left-0"
-        cameraDistance={20}
-        moveParticlesOnHover={true}
-        particleHoverFactor={0.8}
-      /> */}
+      {/* Title */}
+      <h1 className="text-5xl md:text-heading text-center md:text-start text-primary font-black mb-2 py-20 duration-300">
+        ABOUT ME
+      </h1>
 
-      {/* About Section Content */}
-      <div className="flex flex-row flex-wrap justify-between gap-10 container mx-auto items-center text-white w-full">
-        <motion.img
-          src={Pfp}
-          alt="Profile"
-          className="md:h-[600px] h-[400px] w-80 md:mx-0 mx-auto"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-        />
+      {/* Image + Text Layout */}
+      <div className="flex flex-col-reverse md:flex-row-reverse items-center gap-12 md:gap-20 mx-auto">
+        {/* Text Content */}
         <motion.div
-          className="flex flex-col gap-2 flex-1"
+          className="w-full text-paragraph text-lg md:text-3xl leading-relaxed text-justify md:px-10 text-body px-10"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-7xl md:text-start text-center font-medium font-primary mb-10 md:mt-0 mt-15">
-            ABOUT ME
-          </h1>
-
-          <div className="text-xl text-justify md:text-start mx-10">
-            <p>
-              I'm a <strong>Full-Stack Developer</strong> specializing in
-              building dynamic, responsive, and user-friendly web applications.
-              My main focus is on the <strong>MERN</strong> stack but I'm always
-              exploring new technologies to expand my skill set.
-            </p>
-            <p className="pt-5">
-              Ever since I wrote my first line of code, I've been captivated by
-              the way programming allows me to solve real-world problems through
-              <strong> creativity</strong> and <strong>logic.</strong>
-            </p>
-          </div>
+          <p>
+            I&apos;m a <strong>Full-Stack Developer</strong> specializing in building
+            dynamic, responsive, and user-friendly web applications. My main
+            focus is on the <strong>MERN</strong> stack, but I&apos;m always
+            exploring new technologies to expand my skill set.
+          </p>
+          <p className="pt-5">
+            Ever since I wrote my first line of code, I&apos;ve been captivated by
+            how programming allows me to solve real-world problems through
+            <strong> creativity</strong> and <strong>logic</strong>.
+          </p>
         </motion.div>
 
-        {/* <div className="md:block hidden my-10 h-[500px] w-0.5 bg-zinc-700 mx-10"></div> */}
-
-        {/* <motion.div
-          className="flex flex-col text-xl text-center mx-10 md:mb-0 mb-15"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
+        {/* Responsive Image */}
+        <motion.div
+          className="flex justify-center w-full h-full md:basis-1/3"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <h3 className="text-5xl mb-10">EXPERIENCE</h3>
-          <div className="flex flex-col gap-5 text-start">
-            {[2022, 2023].map((year) => (
-              <div className="flex flex-row gap-5" key={year}>
-                <AiOutlineCaretRight color="red" size={30} />
-                <div>
-                  <p className="font-black text-5xl">{year}</p>
-                  <h1 className="font-semibold">
-                    SPECIAL PROGRAM FOR EMPLOYMENT OF STUDENTS (SPES)
-                  </h1>
-                  <ul className="flex flex-col gap-1 mt-3 text-left">
-                    <li>- Web Developer</li>
-                    <li>- City Government of Naga</li>
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div> */}
+          <img
+            src={Pfp}
+            alt="Profile"
+            className="w-auto md:h-[500px] h-96 object-fit rounded-xl shadow-xl "
+          />
+        </motion.div>
       </div>
-      {/* Skill Set Section */}
-      {/* <motion.h1
-        className="text-5xl font-bold text-center text-white mb-10 md:text-6xl"
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
-      >
-        SKILL SET
-      </motion.h1>
-      <Icons /> */}
-      <ImageSlider />
+
+      {/* Skill Icons */}
+      <div className="mt-20">
+        <Icons />
+      </div>
     </motion.section>
   );
 };

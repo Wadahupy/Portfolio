@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #F7F6F3;
+  --color-primary: #f7f6f3;
   --color-secondary: #010100;
-  --font-header: 'inter';
-  --text-tiny: 12rem;
+  --color-paragraph: #a1a1a1;
+  --font-header: "inter";
+  --text-heading: 10rem;
+  --text-semiheading: 8rem;
+  --text-subheading: 5rem;
+  --text-body: 2rem;
 }
-
-
-
-

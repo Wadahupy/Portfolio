@@ -1,77 +1,54 @@
 import { useState } from "react";
-import { NavLink } from "react-router";
 import { LuMenu, LuX } from "react-icons/lu";
 import { Link } from "react-scroll";
 
-const Nav = () => {
-  return (
-    <div className="flex flex-col text-white md:flex-col font-header text-2xl w-full ">
+const NavLinks = ({ onClick }) => (
+  <>
+    {["home", "about", "works", "contact"].map((section) => (
       <Link
-        to="home"
+        key={section}
+        to={section}
         smooth={true}
         duration={500}
-        className="cursor-pointer hover:text-gray-500"
+        onClick={onClick}
+        className="cursor-pointer hover:text-paragraph capitalize"
       >
-        Home
+        {section}
       </Link>
-      <Link
-        to="about"
-        smooth={true}
-        duration={500}
-        className="cursor-pointer hover:text-gray-500"
-      >
-        About
-      </Link>
-      <Link
-        to="works"
-        smooth={true}
-        duration={500}
-        className="cursor-pointer hover:text-gray-500"
-      >
-        Works
-      </Link>
-      <Link
-        to="contact"
-        smooth={true}
-        duration={500}
-        className="cursor-pointer hover:text-gray-500"
-      >
-        Contacts
-      </Link>
-    </div>
-  );
-};
+    ))}
+  </>
+);
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggle = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
 
   return (
-    <>
-      <nav className="flex justify-between items-center p-4">
-        {/* Desktop Navigation */}
-        <div className="md:flex">
-          <Nav />
+    <div className="w-full fixed z-20 bg-black text-white">
+      <div className="flex items-center justify-between px-6 py-4 md:px-10 ">
+        <h1 className="text-2xl font-bold tracking-widest">DCQ</h1>
+
+        {/* Desktop Links */}
+        <div className="hidden md:flex space-x-8 font-header text-xl">
+          <NavLinks />
         </div>
 
-        {/* Mobile Menu Button */}
-        {/* <div className="md:hidden">
-          <button onClick={toggle} className="text-3xl">
-            {isOpen ? <LuX size={50} /> : <LuMenu size={50} />}
+        {/* Mobile Menu Toggle */}
+        <div className="md:hidden">
+          <button onClick={toggle} className="text-white">
+            {isOpen ? <LuX size={32} /> : <LuMenu size={32} />}
           </button>
-        </div> */}
-      </nav>
-
-      {/* Mobile Navigation */}
-      {/* {isOpen && (
-        <div className="flex flex-col items-center gap-4 bg-white w-full py-4 border-t border-gray-300 md:hidden">
-          <Nav />
         </div>
-      )} */}
-    </>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="flex flex-col items-center bg-black text-white space-y-6 py-6 md:hidden font-header text-xl border-t border-gray-700">
+          <NavLinks onClick={closeMenu} />
+        </div>
+      )}
+    </div>
   );
 };
 

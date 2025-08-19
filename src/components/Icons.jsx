@@ -1,83 +1,116 @@
-import React from "react";
 import { motion } from "framer-motion";
+import javascript from "../assets/icons/javascript.svg";
+import flask from "../assets/icons/flask.svg";
+import python from "../assets/icons/python.svg";
+import bootstrap from "../assets/icons/bootstrap.svg";
+import tailwind from "../assets/icons/tailwind.svg";
+import flutter from "../assets/icons/flutter.svg";
+import html from "../assets/icons/html.svg";
+import css from "../assets/icons/html.svg";
+import react from "../assets/icons/react.svg";
+import php from "../assets/icons/php.svg";
+import cplus from "../assets/icons/c++.svg";
+import csharp from "../assets/icons/csharp.svg";
+import node from "../assets/icons/node.svg";
+import mysql from "../assets/icons/mysql.svg";
+import express from "../assets/icons/express.svg";
 
 const iconLogo = [
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    alt: "React",
+    src: javascript,
+    alt: "Javascript",
   },
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
+    src: flask,
     alt: "Flask",
   },
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    src: python,
     alt: "Python",
   },
   {
-    src: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
+    src: bootstrap,
     alt: "Bootstrap",
   },
   {
-    src: "https://www.svgrepo.com/show/374118/tailwind.svg",
+    src: tailwind,
     alt: "Tailwind CSS",
   },
   {
-    src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg",
+    src: flutter,
     alt: "Flutter",
   },
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    src: html,
     alt: "HTML5",
   },
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    src: css,
     alt: "CSS3",
   },
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    alt: "JavaScript",
+    src: react,
+    alt: "React",
   },
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+    src: php,
     alt: "PHP",
   },
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+    src: cplus,
     alt: "C++",
   },
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+    src: csharp,
     alt: "C#",
   },
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    src: node,
     alt: "MongoDB",
   },
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    src: mysql,
     alt: "MySQL",
   },
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    src: express,
     alt: "Express.js",
   },
 ];
 
 const Icons = ({ icons = iconLogo }) => {
+  const loopIcons = [...icons, ...icons];
+
   return (
-    <div className="grid grid-cols-2 md:grid-cols-6 justify-items-center items-center gap-4 max-w-lg md:max-w-3xl mx-auto place-items-center">
-      {icons.map((icon, index) => (
-        <motion.div
-          key={index}
-          className="rounded-xl border-4 bg-white shadow-lg border-slate-200 p-5 flex mx-auto"
-          initial={{ opacity: 0, scale: 0.5, y: 20 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.3, delay: index * 0.1 }}
-        >
-          <img src={icon.src} width="40" height="40" alt={icon.alt} />
-        </motion.div>
-      ))}
+    <div className="relative overflow-hidden w-full py-4 gap-4 mx-auto flex flex-wrap z-10 side-padding justify-center">
+      
+      {/* Scrolling container */}
+      <motion.div
+        className="flex gap-8 w-max"
+        animate={{ x: ["0%", "-50%"] }}
+        transition={{
+          repeat: Infinity,
+          duration: 60,
+          ease: "linear",
+        }}
+      >
+        {loopIcons.map((icon, index) => (
+          <div key={index} className="shrink-0 p-4 rounded-xl shadow-lg ">
+            <img
+              src={icon.src}
+              width="120"
+              height="120"
+              alt={icon.alt || "icon"}
+              className="object-contain"
+            />
+          </div>
+        ))}
+      </motion.div>
+
+      {/* Gradient edges for fade effect */}
+      <div className="bg-gradient-to-l from-black/70 via-transparent to-black/70 absolute w-full h-full" />
+      <div className="absolute top-0 left-0 h-full w-50 bg-gradient-to-r from-black via-black to-transparent pointer-events-none" />
+      <div className="absolute top-0 right-0 h-full w-50 bg-gradient-to-l from-black via-black to-transparent pointer-events-none" />
     </div>
   );
 };
